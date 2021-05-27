@@ -1,0 +1,27 @@
+.card {
+  height: 360px;
+}
+
+.card-body {
+  background-color: #e7e7e7;
+  height: 150px;
+
+  ul {
+    list-style-type: none;
+  }
+
+  .recipe-details {
+    font-size: 0.75rem;
+    height: 80%;
+
+    .recipe-details__instructions {
+      font-family: Roboto, sans-serif;
+    }
+
+    .truncate {
+      height: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

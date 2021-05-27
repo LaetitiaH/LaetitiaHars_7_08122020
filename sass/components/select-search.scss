@@ -1,0 +1,12 @@
+.dropdown-menu.show {
+  display: flex;
+  flex-direction: column;
+  max-height: 390px;
+  max-width: 660px;
+  flex-wrap: wrap;
+}
+
+.dropdown-item {
+  //max-width: 200px;
+  width: max-content;
+}
