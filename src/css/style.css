@@ -10771,16 +10771,28 @@ body {
   background-color: #e7e7e7;
 }
 
-.dropdown-menu.show {
+.btn-group .dropdown-toggle {
+  width: 170px;
+  height: 70px;
+}
+.btn-group .dropdown-menu.show {
   display: flex;
   flex-direction: column;
   max-height: 390px;
-  max-width: 660px;
   flex-wrap: wrap;
+  top: -5px !important;
+  border: unset;
 }
-
-.dropdown-item {
+.btn-group .dropdown-item {
   width: max-content;
+}
+.btn-group .form-control::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-size: 14px;
+}
+.btn-group .dropdown-search {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

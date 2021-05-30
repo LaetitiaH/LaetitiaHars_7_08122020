@@ -79,25 +79,73 @@
         </div>
       </div>
       <div class="row mt-3">
-        <div class="col-5">
-          <div class="btn-group">
+        <div class="col-5 w-100 d-flex flex-column flex-lg-row">
+          <div class="btn-group me-3" id="ingredientDropdown">
             <button
               type="button"
-              class="btn btn-primary dropdown-toggle"
+              class="
+                btn btn-primary
+                bg-primary
+                dropdown-toggle dropdown-toggle-ingredients
+                d-flex
+                align-items-center
+                justify-content-between
+              "
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
             >
-              <!--              <input-->
-              <!--                type="text"-->
-              <!--                class="form-control"-->
-              <!--                id="searchIngredients"-->
-              <!--                aria-describedby="searchIngredients"-->
-              <!--                placeholder="Rechercher un ingrédient"-->
-              <!--              />-->
-              Ingrédients
+              <input
+                type="text"
+                class="
+                  form-control
+                  dropdown-search dropdown-searchIngredients
+                  bg-primary
+                  border-primary
+                  text-white
+                "
+                id="searchIngredients"
+                aria-describedby="searchIngredients"
+                placeholder="Rechercher un ingrédient"
+              />
+              <span class="dropdown-ingredients-text fs-6">Ingrédients</span>
             </button>
-            <div class="dropdown-menu bg-primary">
+            <div class="dropdown-menu ingredients-menu bg-primary">
+              <a class="dropdown-item text-white w-0" href="#">Action</a>
+              <a class="dropdown-item text-white w-0" href="#">Action</a>
+            </div>
+          </div>
+          <div class="btn-group me-3 mt-3 mt-lg-0" id="applianceDropdown">
+            <button
+              type="button"
+              class="
+                btn btn-success
+                bg-success
+                dropdown-toggle dropdown-toggle-appliance
+                d-flex
+                align-items-center
+                justify-content-between
+              "
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <input
+                type="text"
+                class="
+                  form-control
+                  dropdown-search dropdown-searchAppliance
+                  bg-success
+                  border-primary
+                  text-white
+                "
+                id="searchAppliance"
+                aria-describedby="searchAppliance"
+                placeholder="Rechercher un appareil"
+              />
+              <span class="dropdown-appliance-text fs-6">Appareil</span>
+            </button>
+            <div class="dropdown-menu appliance-menu bg-success">
               <a class="dropdown-item text-white w-0" href="#">Action</a>
               <a class="dropdown-item text-white w-0" href="#">Action</a>
               <a class="dropdown-item text-white w-0" href="#">Action</a>
@@ -128,8 +176,39 @@
               <a class="dropdown-item text-white w-0" href="#">Action</a>
               <a class="dropdown-item text-white w-0" href="#">Action</a>
               <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
+            </div>
+          </div>
+          <div class="btn-group me-3 mt-3 mt-lg-0" id="toolsDropdown">
+            <button
+              type="button"
+              class="
+                btn btn-danger
+                bg-danger
+                dropdown-toggle dropdown-toggle-tools
+                d-flex
+                align-items-center
+                justify-content-between
+              "
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <input
+                type="text"
+                class="
+                  form-control
+                  dropdown-search dropdown-searchTools
+                  bg-danger
+                  border-danger
+                  text-white
+                "
+                id="toolsIngredients"
+                aria-describedby="searchTools"
+                placeholder="Rechercher un ustensile"
+              />
+              <span class="dropdown-tools-text fs-6">Ustensiles</span>
+            </button>
+            <div class="dropdown-menu tools-menu bg-danger">
               <a class="dropdown-item text-white w-0" href="#">Action</a>
               <a class="dropdown-item text-white w-0" href="#">Action</a>
             </div>
@@ -284,5 +363,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="src/select-filter.js"></script>
   </body>
 </html>
