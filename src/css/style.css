@@ -10740,25 +10740,29 @@ body {
 .card {
   height: 360px;
 }
-
-.card-body {
+.card .card-title {
+  width: 70%;
+}
+.card .card-body {
   background-color: #e7e7e7;
   height: 150px;
 }
-.card-body ul {
+.card .card-body ul {
   list-style-type: none;
 }
-.card-body .recipe-details {
+.card .card-body .recipe-details {
   font-size: 0.75rem;
   height: 80%;
 }
-.card-body .recipe-details .recipe-details__instructions {
+.card .card-body .recipe-details .recipe-details__instructions {
   font-family: Roboto, sans-serif;
 }
-.card-body .recipe-details .truncate {
-  height: 100%;
+.card .card-body .recipe-instructions,
+.card .card-body .recipe-ingredients-list {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .input-group {

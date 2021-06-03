@@ -215,138 +215,51 @@
           </div>
         </div>
       </div>
-      <div class="row mt-3">
-        <div class="col-12 col-md-6 col-lg-4 mb-5">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="assets/img/card-img.png"
-              alt="image recette"
-            />
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <h5 class="card-title fs-6">Limonade de Coco</h5>
-                <div class="fw-bold d-flex align-items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    class="bi bi-clock mx-2"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
-                    />
-                    <path
-                      d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
-                    />
-                  </svg>
-                  10 min
-                </div>
-              </div>
-              <div class="card-text row mt-2 recipe-details">
-                <div class="col-6 truncate">
-                  <ul class="m-0 p-0">
-                    <li><span class="fw-bold">Lait de coco:</span> 400ml</li>
-                    <li><span class="fw-bold">Jus de citron:</span> 2</li>
-                    <li><span class="fw-bold">Jus de citron:</span> 2</li>
-                    <li><span class="fw-bold">Jus de citron:</span> 2</li>
-                    <li><span class="fw-bold">Jus de citron:</span> 2</li>
-                    <li><span class="fw-bold">Jus de citron:</span> 2</li>
-                    <li><span class="fw-bold">Jus de citron:</span> 2</li>
-                    <li><span class="fw-bold">Jus de citron:</span> 2</li>
-                  </ul>
-                </div>
-                <div class="col-6 recipe-details__instructions truncate">
-                  Commencer par cuire les pommes de terre dans l'eau bouillante.
-                  Puis epluchez les et coupez les en rondelles. Emincer les
-                  oignons puis les faire dorer dans du beurre. Ajouter le jambon
-                  fumé coupé en en morceaux ainsi que les pommes de terres.
-                  Salez, poivrez à votre gout ( et celui de vos convives )
-                  Laissez cuisiner durant environ 10 minutes puis ajouter le vin
-                  blanc. Après 5 minutes, mettre le tout dans un plat à gratin.
-                  Coupez le rebelochon, soit en tranches, soit le couper en 2
-                  dans le sens de l'épaisseur et recouvrir les pommes de terre.
-                  Cuire au four (environ 220°) durant 25 minutes. C'est prêt !
-                </div>
-              </div>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-5">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="assets/img/card-img.png"
-              alt="image recette"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Titre de la carte</h5>
-              <p class="card-text">Contenu textuel de la carte</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-5">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="assets/img/card-img.png"
-              alt="image recette"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Titre de la carte</h5>
-              <p class="card-text">Contenu textuel de la carte</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-5">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="assets/img/card-img.png"
-              alt="image recette"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Titre de la carte</h5>
-              <p class="card-text">Contenu textuel de la carte</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-5">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="assets/img/card-img.png"
-              alt="image recette"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Titre de la carte</h5>
-              <p class="card-text">Contenu textuel de la carte</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-5">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="assets/img/card-img.png"
-              alt="image recette"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Titre de la carte</h5>
-              <p class="card-text">Contenu textuel de la carte</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="row mt-3" id="recipeList"></div>
     </div>
+
+    <template id="recipe-card">
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <article class="card">
+          <img
+            class="card-img-top"
+            src="assets/img/card-img.png"
+            alt="image recette"
+          />
+          <div class="card-body">
+            <section class="d-flex justify-content-between align-items-center">
+              <h5 class="card-title fs-6"></h5>
+              <div class="card-price fw-bold d-flex align-items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-clock mx-2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                  />
+                  <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+                  />
+                </svg>
+                <span class="recipe-price"></span>
+              </div>
+            </section>
+            <div class="card-text row mt-2 recipe-details">
+              <div class="col-6 truncate recipe-ingredients-content">
+                <ul class="m-0 p-0 recipe-ingredients-list"></ul>
+              </div>
+              <div class="col-6 recipe-details__instructions">
+                <div class="recipe-instructions"></div>
+              </div>
+            </div>
+            <a href="#" class="stretched-link"></a>
+          </div>
+        </article></div
+    ></template>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -363,6 +276,9 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="src/shared.js"></script>
+    <script src="src/recipes.js"></script>
+    <script src="src/recipeList.js"></script>
     <script src="src/select-filter.js"></script>
   </body>
 </html>
