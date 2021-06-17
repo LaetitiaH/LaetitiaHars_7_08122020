@@ -1,21 +1,26 @@
 // DOM Element
+
+const container = document.querySelector(".container");
 const dropdownInput = document.querySelectorAll(".dropdown-search");
 const ingredientDropdown = $("#ingredientDropdown");
 const applianceDropdown = $("#applianceDropdown");
 const toolsDropdown = $("#toolsDropdown");
-const screenWidth = window.outerWidth - 50;
+const ingredientDropdownScroll = document.querySelector("#ingredientDropdown");
+const applianceDropdownScroll = document.querySelector("#applianceDropdown");
+const toolsDropdownScroll = document.querySelector("#toolsDropdown");
+const screenWidth = container.offsetWidth - 30;
 
 // On click on ingredient Dropdown dropdown, open dropdown
 ingredientDropdown.on("shown.bs.dropdown", (event) => {
   const expandedDropdownWidth = event.target.scrollWidth;
-
   openDropdown(
-    ".dropdown-toggle-tools",
+    ".dropdown-toggle-ingredients",
     ".ingredients-menu",
     ".dropdown-searchIngredients",
     ".dropdown-ingredients-text",
     expandedDropdownWidth
   );
+  ingredientDropdownScroll.scrollIntoView();
 });
 
 // On click on appliance Dropdown dropdown, open dropdown
@@ -29,12 +34,13 @@ applianceDropdown.on("shown.bs.dropdown", (event) => {
     ".dropdown-appliance-text",
     expandedDropdownWidth
   );
+
+  applianceDropdownScroll.scrollIntoView();
 });
 
 // On click on tools Dropdown dropdown, open dropdown
 toolsDropdown.on("shown.bs.dropdown", (event) => {
   const expandedDropdownWidth = event.target.scrollWidth;
-
   openDropdown(
     ".dropdown-toggle-tools",
     ".tools-menu",
@@ -42,6 +48,8 @@ toolsDropdown.on("shown.bs.dropdown", (event) => {
     ".dropdown-tools-text",
     expandedDropdownWidth
   );
+
+  toolsDropdownScroll.scrollIntoView();
 });
 
 // On click on Ingredients close dropdown, close dropdown
@@ -91,7 +99,8 @@ function openDropdown(
   } else {
     select.style.width = `${screenWidth}px`;
     openSelect.style.width = `${screenWidth}px`;
-    openSelect.style.maxHeight = "600px";
+    openSelect.style.maxHeight = "620px";
+    openSelect.style.overflow = "auto";
   }
 
   search.style.display = "flex";

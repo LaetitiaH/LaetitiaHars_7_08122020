@@ -78,8 +78,8 @@
           </button>
         </div>
       </div>
-      <div class="row mt-3">
-        <div class="col-5 w-100 d-flex flex-column flex-lg-row">
+      <div class="row mt-3"">
+        <div class="col-5 w-100 d-flex flex-column flex-lg-row flex-wrap">
           <div class="btn-group me-3" id="ingredientDropdown">
             <button
               type="button"
@@ -110,10 +110,7 @@
               />
               <span class="dropdown-ingredients-text fs-6">Ingrédients</span>
             </button>
-            <div class="dropdown-menu ingredients-menu bg-primary">
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-            </div>
+            <div class="dropdown-menu ingredients-menu bg-primary"></div>
           </div>
           <div class="btn-group me-3 mt-3 mt-lg-0" id="applianceDropdown">
             <button
@@ -145,38 +142,7 @@
               />
               <span class="dropdown-appliance-text fs-6">Appareil</span>
             </button>
-            <div class="dropdown-menu appliance-menu bg-success">
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-            </div>
+            <div class="dropdown-menu appliance-menu bg-success"></div>
           </div>
           <div class="btn-group me-3 mt-3 mt-lg-0" id="toolsDropdown">
             <button
@@ -202,16 +168,13 @@
                   border-danger
                   text-white
                 "
-                id="toolsIngredients"
+                id="searchTools"
                 aria-describedby="searchTools"
                 placeholder="Rechercher un ustensile"
               />
               <span class="dropdown-tools-text fs-6">Ustensiles</span>
             </button>
-            <div class="dropdown-menu tools-menu bg-danger">
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-              <a class="dropdown-item text-white w-0" href="#">Action</a>
-            </div>
+            <div class="dropdown-menu tools-menu bg-danger"></div>
           </div>
         </div>
       </div>
@@ -278,6 +241,9 @@
     ></script>
     <script src="src/shared.js"></script>
     <script src="src/recipes.js"></script>
+    <script src="src/ingredientsList.js"></script>
+    <script src="src/applianceList.js"></script>
+    <script src="src/toolsList.js"></script>
     <script src="src/recipeList.js"></script>
     <script src="src/select-filter.js"></script>
   </body>

@@ -8,6 +8,9 @@ const recipeListContent = document.querySelector("#recipeList");
 const template = document.querySelector("#recipe-card");
 
 displayRecipeList(initialRecipeList);
+displayIngredientListDropdown(initialRecipeList);
+displayApplianceListDropdown(initialRecipeList);
+displayToolsListDropdown(initialRecipeList);
 
 // display Recipe list
 function displayRecipeList(recipeList) {
