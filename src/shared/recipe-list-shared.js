@@ -20,7 +20,36 @@ function displayRecipeList() {
   displayToolsListDropdown();
 }
 
-function filterRecipeList() {}
+function filterRecipeList() {
+  const recipeWithInputSearch = [];
+  for (let recipe of initialRecipeList) {
+    if (
+      recipe.name.toLowerCase().includes(searchInputValue) ||
+      recipe.ingredients.some((ingredient) =>
+        ingredient.ingredient.toLowerCase().includes(searchInputValue)
+      ) ||
+      recipe.description.toLowerCase().includes(searchInputValue)
+    ) {
+      recipeWithInputSearch.push(recipe);
+    }
+  }
+
+  return tagsListAll.reduce(
+    (recipeWithInputSearch, tag) => {
+      return recipeWithInputSearch.filter((recipe) =>
+        recipe.ingredients.some(
+          (ingredient) =>
+            ingredient.ingredient.toLowerCase().includes(tag.value) ||
+            recipe.appliance.toLowerCase().includes(tag.value) ||
+            recipe.ustensils.some((ustensil) =>
+              ustensil.toLowerCase().includes(tag.value)
+            )
+        )
+      );
+    },
+    [...recipeWithInputSearch]
+  );
+}
 
 function removeRecipeList() {
   const recipeListContentUpdated = document.querySelector("#recipeList");
