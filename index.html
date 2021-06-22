@@ -22,6 +22,7 @@
           <div class="input-group input-group-lg rounded text-muted">
             <input
               class="form-control form-control-lg border-0 fs-6 text-truncate"
+              id="search"
               type="text"
               placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette"
               aria-label="Rechercher un ingrédient, appareil, ustensiles ou une recette"
@@ -48,38 +49,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col mt-4">
-          <button
-            type="button"
-            class="
-              btn btn-primary
-              d-flex
-              justify-content-around
-              align-items-center
-            "
-          >
-            Cocogyofè_luyflu
-            <span class="badge badge-light"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-x-circle"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-                />
-                <path
-                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                /></svg
-            ></span>
-          </button>
-        </div>
+        <div class="col mt-4 d-flex flex-row flex-wrap tagsList"></div>
       </div>
-      <div class="row mt-3"">
-        <div class="col-5 w-100 d-flex flex-column flex-lg-row flex-wrap">
+      <div class="row mt-3">
+        <div
+          class="col-5 w-100 d-flex flex-column flex-lg-row flex-wrap"
+          id="dropdownList"
+        >
           <div class="btn-group me-3" id="ingredientDropdown">
             <button
               type="button"
@@ -224,6 +200,39 @@
         </article></div
     ></template>
 
+    <template id="tag-button">
+      <button
+        type="button"
+        class="
+          btn
+          d-flex
+          justify-content-around
+          align-items-center
+          mx-1
+          mt-1
+          tag-button
+        "
+      >
+        <span class="tag text-capitalize"></span>
+        <span class="badge badge-light"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-x-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            /></svg
+        ></span>
+      </button>
+    </template>
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -239,12 +248,15 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script src="src/shared.js"></script>
     <script src="src/recipes.js"></script>
-    <script src="src/ingredientsList.js"></script>
-    <script src="src/applianceList.js"></script>
-    <script src="src/toolsList.js"></script>
-    <script src="src/recipeList.js"></script>
+    <script src="src/shared/utils.js"></script>
+    <script src="src/appliance-list.js"></script>
+    <script src="src/ingredients-list.js"></script>
+    <script src="src/tools-list.js"></script>
+    <script src="src/shared/tags-list.js"></script>
+    <script src="src/shared/recipe-list-shared.js"></script>
+    <script src="src/recipe-list.js"></script>
+    <script src="src/shared/button-tags.js"></script>
     <script src="src/select-filter.js"></script>
   </body>
 </html>

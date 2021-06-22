@@ -1,19 +1,38 @@
-// Variables initializers
+function displayRecipeList() {
+  // display tags list
+  dropdownList.classList.add("d-flex");
 
-const initialRecipeList = getRecipesList();
+  recipeList = filterRecipeList();
 
-// DOM
-const recipeListContent = document.querySelector("#recipeList");
+  // remove all recipes
+  removeRecipeList();
 
-const template = document.querySelector("#recipe-card");
+  if (recipeList.length) {
+    // insert recipe list in DOM
+    insertRecipeList(recipeList);
+  } else {
+    // insert text information about no results
+    displayNoRecipeText();
+  }
+  // display tags lists with new recipe list
+  displayIngredientListDropdown();
+  displayApplianceListDropdown();
+  displayToolsListDropdown();
+}
 
-displayRecipeList(initialRecipeList);
-displayIngredientListDropdown(initialRecipeList);
-displayApplianceListDropdown(initialRecipeList);
-displayToolsListDropdown(initialRecipeList);
+function filterRecipeList() {}
 
-// display Recipe list
-function displayRecipeList(recipeList) {
+function removeRecipeList() {
+  const recipeListContentUpdated = document.querySelector("#recipeList");
+
+  recipeListContentUpdated.childNodes.forEach((child) => {
+    if (child.localName === "div") {
+      child.remove();
+    }
+  });
+}
+
+function insertRecipeList(recipeList) {
   recipeList.forEach((recipe) => {
     // initialize template clone of template
     const template_clone = template.content.cloneNode(true);
@@ -52,4 +71,15 @@ function getQuantity(ingredient) {
   } else {
     return "";
   }
+}
+
+function displayNoRecipeText() {
+  const recipeListContentUpdated = document.querySelector("#recipeList");
+  const noRecipeToDisplayText =
+    "<div class='d-flex justify-content-center align-items-center no-recipe-list'> Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc.</div>";
+  addHtmlContent(recipeListContentUpdated, noRecipeToDisplayText);
+
+  // remove tags list
+  dropdownList.classList.remove("d-flex");
+  dropdownList.style.display = "none";
 }

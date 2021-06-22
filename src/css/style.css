@@ -10803,4 +10803,9 @@ body {
   display: none;
 }
 
+.no-recipe-list {
+  font-weight: bold;
+  height: 28vh;
+}
+
 /*# sourceMappingURL=style.css.map */
