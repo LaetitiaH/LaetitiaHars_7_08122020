@@ -15,7 +15,7 @@ function insertTagList(listToDeDuplicated, value, element) {
   const toolsListToInsert = listSort
     .map(
       (item) =>
-        `<a class="dropdown-item text-white text-capitalize w-0" href="#">${item}</a>`
+        `<button type="button" class="dropdown-item text-white text-capitalize w-0" role="option">${item}</button>`
     )
     .toString()
     .replace(/,/g, "");

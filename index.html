@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <link rel="stylesheet" href="src/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -57,8 +57,9 @@
           id="dropdownList"
         >
           <div class="btn-group me-3" id="ingredientDropdown">
-            <button
-              type="button"
+            <div
+              role="listbox"
+              tabindex="0"
               class="
                 btn btn-primary
                 bg-primary
@@ -85,12 +86,13 @@
                 placeholder="Rechercher un ingrédient"
               />
               <span class="dropdown-ingredients-text fs-6">Ingrédients</span>
-            </button>
+            </div>
             <div class="dropdown-menu ingredients-menu bg-primary"></div>
           </div>
           <div class="btn-group me-3 mt-3 mt-lg-0" id="applianceDropdown">
-            <button
-              type="button"
+            <div
+              role="listbox"
+              tabindex="0"
               class="
                 btn btn-success
                 bg-success
@@ -117,12 +119,13 @@
                 placeholder="Rechercher un appareil"
               />
               <span class="dropdown-appliance-text fs-6">Appareil</span>
-            </button>
+            </div>
             <div class="dropdown-menu appliance-menu bg-success"></div>
           </div>
           <div class="btn-group me-3 mt-3 mt-lg-0" id="toolsDropdown">
-            <button
-              type="button"
+            <div
+              role="listbox"
+              tabindex="0"
               class="
                 btn btn-danger
                 bg-danger
@@ -149,7 +152,7 @@
                 placeholder="Rechercher un ustensile"
               />
               <span class="dropdown-tools-text fs-6">Ustensiles</span>
-            </button>
+            </div>
             <div class="dropdown-menu tools-menu bg-danger"></div>
           </div>
         </div>
