@@ -10739,6 +10739,7 @@ body {
 
 .card {
   height: 360px;
+  cursor: pointer;
 }
 .card .card-title {
   width: 70%;
@@ -10757,8 +10758,7 @@ body {
 .card .card-body .recipe-details .recipe-details__instructions {
   font-family: Roboto, sans-serif;
 }
-.card .card-body .recipe-instructions,
-.card .card-body .recipe-ingredients-list {
+.card .card-body .recipe-instructions {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
